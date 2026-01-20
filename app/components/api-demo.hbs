@@ -1,0 +1,14 @@
+<h3>Fake API Call</h3>
+<button type='button' {{on 'click' this.loadData}}>Load Users</button>
+
+{{#if this.isLoading}}
+  <div class='spinner'></div>
+{{/if}}
+
+{{#if this.data}}
+  <ul>
+    {{#each this.data as |user|}}
+      <li>{{user.name}} — {{user.email}}</li>
+    {{/each}}
+  </ul>
+{{/if}}

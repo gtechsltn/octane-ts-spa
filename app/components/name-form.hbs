@@ -1,0 +1,8 @@
+<h3>Form Input Binding</h3>
+<label>Nhập tên:
+  <input
+    placeholder='Nhập tên...'
+    value={{this.name}}
+    {{on 'input' this.updateName}}
+  /></label>
+<p>Xin chào: <b>{{this.name}}</b></p>
